@@ -1,0 +1,1 @@
+require 'app/initializers/mongo'
