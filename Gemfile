@@ -1,5 +1,12 @@
 source 'https://rubygems.org'
 
-gemlist = File.read('app.rb').scan(%r{^.*require.*'(?<gem>[^'"]*)'$}).flatten
+gem 'sinatra'
+gem 'thin'
+gem 'mongo'
+gem 'bson_ext'
 
-gemlist.each { |gemname| gem gemname }
+gem 'slim'
+gem 'sass'
+gem 'coffee-script'
+
+gem 'pry'

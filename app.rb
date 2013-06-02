@@ -1,17 +1,9 @@
 #!/usr/bin/env ruby
 
-require 'sinatra'
-require 'thin'
-require 'mongo'
-require 'bson_ext'
+$:.unshift '.'
 
-require 'slim'
-require 'sass'
-require 'coffee-script'
-
-require 'pry'
-
-require './mongo.rb'
+require 'libraries'
+require 'mongo_config'
 
 class SassHandler < Sinatra::Base
   set :views, File.dirname(__FILE__) + '/templates/sass'
@@ -35,7 +27,7 @@ class MyApp < Sinatra::Base
   use SassHandler
   use CoffeeHandler
 
-  set :public, File.dirname(__FILE__) + '/public'
+  set :public_dir, File.dirname(__FILE__) + '/public'
   set :views, File.dirname(__FILE__) + '/views'
 
   get '/' do
