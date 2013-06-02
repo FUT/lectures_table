@@ -1,11 +1,17 @@
 #!/usr/bin/env ruby
 
-require 'pry'
 require 'sinatra'
 require 'thin'
+require 'mongo'
+require 'bson_ext'
+
 require 'slim'
 require 'sass'
 require 'coffee-script'
+
+require 'pry'
+
+require './mongo.rb'
 
 class SassHandler < Sinatra::Base
   set :views, File.dirname(__FILE__) + '/templates/sass'

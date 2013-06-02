@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    bson (1.8.6)
     coderay (1.0.9)
     coffee-script (2.2.0)
       coffee-script-source
@@ -11,6 +12,8 @@ GEM
     execjs (1.4.0)
       multi_json (~> 1.0)
     method_source (0.8.1)
+    mongo (1.8.6)
+      bson (~> 1.8.6)
     multi_json (1.7.5)
     pry (0.9.12.2)
       coderay (~> 1.0.5)
@@ -40,6 +43,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-script
+  mongo
   pry
   sass
   sinatra
