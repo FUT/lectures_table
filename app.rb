@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
 
+require 'pry'
 require 'sinatra'
+require 'thin'
 require 'slim'
 require 'sass'
 require 'coffee-script'
@@ -8,7 +10,7 @@ require 'coffee-script'
 class SassHandler < Sinatra::Base
   set :views, File.dirname(__FILE__) + '/templates/sass'
 
-  get '/css/*.css' do
+  get '/templates/sass/*.css' do
     filename = params[:splat].first
     sass filename.to_sym
   end
@@ -17,7 +19,7 @@ end
 class CoffeeHandler < Sinatra::Base
   set :views, File.dirname(__FILE__) + '/templates/coffee'
 
-  get "/js/*.js" do
+  get "/templates/coffee/*.js" do
     filename = params[:splat].first
     coffee filename.to_sym
   end
@@ -31,7 +33,7 @@ class MyApp < Sinatra::Base
   set :views, File.dirname(__FILE__) + '/views'
 
   get '/' do
-    slim :home
+    slim :home, layout: :application
   end
 end
 
