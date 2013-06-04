@@ -1,5 +1,5 @@
 module LT
-  module Handlers
+  module Controllers
     class Sass < Sinatra::Base
       set :views, "#{ Sinatra::Application.root }/assets/sass"
 

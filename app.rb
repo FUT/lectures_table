@@ -1,14 +1,17 @@
 #!/usr/bin/env ruby
 
 require 'app/libraries'
-require 'app/initializers/all'
-require 'app/handlers/all'
+require 'lib/load_all'
+
+load_all 'app/initializers/*'
 
 module LT
   class App < Sinatra::Base
-    use Handlers::Sass
-    use Handlers::Coffee
-    use Handlers::Home
+    load_all 'app/controllers/*'
+
+    use Controllers::Sass
+    use Controllers::Coffee
+    use Controllers::Pages
 
     set :public_dir, Sinatra::Application.root + '/public'
   end

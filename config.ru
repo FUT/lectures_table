@@ -8,6 +8,6 @@ rescue LoadError
   nil
 end
 
-require 'app/app'
+require 'app'
 
-run LT::App.new(port: 3000)
+run LT::App.new

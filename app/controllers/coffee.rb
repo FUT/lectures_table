@@ -1,5 +1,5 @@
 module LT
-  module Handlers
+  module Controllers
     class Coffee < Sinatra::Base
       set :views, "#{ Sinatra::Application.root }/assets/coffee"
 
