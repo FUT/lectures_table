@@ -3,12 +3,10 @@
 require 'app/libraries'
 require 'lib/load_all'
 
-load_all 'app/initializers/*'
+load_all 'app/initializers/*', 'app/controllers/*'
 
 module LT
   class App < Sinatra::Base
-    load_all 'app/controllers/*'
-
     use Controllers::Sass
     use Controllers::Coffee
     use Controllers::Pages

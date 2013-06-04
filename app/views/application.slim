@@ -12,5 +12,8 @@ html
     title Lectures timetable
 
   body ng-app='lt-app'
-    .container
+    .header
+      .user User
+      .add Add
+    .container ng-view='ng-view'
       == yield
