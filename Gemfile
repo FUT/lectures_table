@@ -9,4 +9,6 @@ gem 'slim'
 gem 'sass'
 gem 'coffee-script'
 
+gem 'simple_form'
+
 gem 'pry'

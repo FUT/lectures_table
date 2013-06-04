@@ -6,4 +6,6 @@ require 'slim'
 require 'sass'
 require 'coffee-script'
 
+require 'simple_form'
+
 require 'pry'
