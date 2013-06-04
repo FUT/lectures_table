@@ -1,6 +1,9 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    active_support (3.0.0)
+      activesupport (= 3.0.0)
+    activesupport (3.0.0)
     bson (1.8.6)
     bson_ext (1.8.6)
       bson (~> 1.8.6)
@@ -45,6 +48,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_support
   bson_ext
   coffee-script
   mongo
