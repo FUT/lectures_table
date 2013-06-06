@@ -1,1 +1,3 @@
-window.application = angular.module 'lt-app', ['ngResource']
+window.lt = {}
+
+window.lt.application = angular.module 'lt-app', ['ngResource']

@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 unless $LOAD_PATH.include? '.'
   $LOAD_PATH.unshift File.expand_path(File.dirname(__FILE__))
 end
@@ -10,4 +12,4 @@ end
 
 require 'app'
 
-run LT::Controllers::Application.new
+LT::Controllers::Application.run! port: 3000

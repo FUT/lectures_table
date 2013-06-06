@@ -4,7 +4,7 @@ module LT
       use Sass
       use Coffee
       use Pages
-      use Lectures
+      use Tags
       use Partials
     end
   end
