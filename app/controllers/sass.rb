@@ -1,6 +1,6 @@
 module LT
   module Controllers
-    class Sass < Sinatra::Base
+    class Sass < Base
       set :views, "#{ Sinatra::Application.root }/assets/sass"
 
       get '/app/assets/sass/*.css' do

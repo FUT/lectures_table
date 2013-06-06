@@ -8,12 +8,14 @@ html
     script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js'
 
     script type='text/javascript' src='/app/assets/coffee/application.js'
+    script type='text/javascript' src='/app/assets/coffee/routes.js'
+    script type='text/javascript' src='/app/assets/coffee/controllers.js'
 
     title Lectures timetable
 
   body ng-app='lt-app'
     .header
-      .user User
+      .user = @token
       .add Add
     .container ng-view='ng-view'
       == yield

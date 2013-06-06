@@ -10,4 +10,4 @@ end
 
 require 'app'
 
-run LT::App.new
+run LT::Controllers::Application.new

@@ -1,6 +1,6 @@
 module LT
   module Controllers
-    class Pages < Sinatra::Base
+    class Pages < Base
       get '/' do
         slim :home, layout: :application
       end

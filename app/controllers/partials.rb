@@ -1,6 +1,6 @@
 module LT
   module Controllers
-    class Pages < Sinatra::Base
+    class Partials < Base
       get '/partials/*' do
         filename = params[:splat].first
         slim :"partials/#{ filename }"

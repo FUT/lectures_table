@@ -1,16 +1,13 @@
 #!/usr/bin/env ruby
 
 require 'app/libraries'
+
+# Define load_all method
 require 'lib/load_all'
 
-load_all 'app/initializers/*', 'app/controllers/*'
+load_all 'app/initializers/*', 'lib/*'
 
-module LT
-  class App < Sinatra::Base
-    use Controllers::Sass
-    use Controllers::Coffee
-    use Controllers::Pages
-
-    set :public_dir, Sinatra::Application.root + '/public'
-  end
-end
+# Load base controller, other controllers, main application controller
+require 'app/controllers/base'
+load_all 'app/controllers/*'
+require 'app/application'

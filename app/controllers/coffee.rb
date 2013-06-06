@@ -1,6 +1,6 @@
 module LT
   module Controllers
-    class Coffee < Sinatra::Base
+    class Coffee < Base
       set :views, "#{ Sinatra::Application.root }/assets/coffee"
 
       get "/app/assets/coffee/*.js" do
