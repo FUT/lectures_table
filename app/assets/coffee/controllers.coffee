@@ -1,2 +1,2 @@
-application.controller 'LectureCtrl', ($routeParams) ->
-  alert $routeParams
+application.controller 'LecturesCtrl', ($routeParams) ->
+  console.log $routeParams
