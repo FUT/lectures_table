@@ -1,2 +1,2 @@
-application.controller 'LecturesCtrl', ($routeParams) ->
-  console.log $routeParams
+application.controller 'LecturesCtrl', ($scope, $routeParams) ->
+  $scope.lectures = 1

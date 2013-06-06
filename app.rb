@@ -5,7 +5,7 @@ require 'app/libraries'
 # Define load_all method
 require 'lib/load_all'
 
-load_all 'app/initializers/*', 'lib/*'
+load_all 'app/initializers/*', 'lib/*', 'app/models/*'
 
 # Load base controller, other controllers, main application controller
 require 'app/controllers/base'
