@@ -6,7 +6,6 @@ module LT
       use Pages
       use Lectures
       use Partials
-      binding.pry
     end
   end
 end

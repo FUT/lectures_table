@@ -7,7 +7,6 @@ module LT
       # end
 
       # get '/l*' do
-      #   binding.pry
       #   slim :'lectures/show'
       # end
     end
